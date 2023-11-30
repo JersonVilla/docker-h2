@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  docker-h2-jerson:
+    image: docker-h2-jerson
+    deploy:
+      resources:
+        limits:
+          memory: 600M
+        reservations:
+          memory: 200M
+    container_name: docker-h2-jerson
+    build:
+      context: .
+      dockerfile: docker-h2-jerson
+    ports:
+      - 8080:8080

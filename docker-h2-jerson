@@ -1,0 +1,4 @@
+FROM openjdk:17
+RUN mkdir /opt/app
+COPY target/Docker-H2-Jerson-Version-0.0.1.jar /opt/app
+CMD ["java", "-jar", "/opt/app/Docker-H2-Jerson-Version-0.0.1.jar"]
